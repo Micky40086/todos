@@ -10,7 +10,8 @@ module.exports = {
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components'),
-      reducers: path.resolve(__dirname, 'src/reducers')
+      reducers: path.resolve(__dirname, 'src/reducers'),
+      api: path.resolve(__dirname, 'src/api')
     }
   },
   module: {

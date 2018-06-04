@@ -6,12 +6,9 @@ class Block extends React.Component {
   render() {
     return (
       <ListGroup>
-
-        <ListGroupItem>Cras justo odio</ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem>Morbi leo risus</ListGroupItem>
-        <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        { this.props.items.map((item) => 
+          <ListGroupItem key={item.id}>{item.name}</ListGroupItem>
+        )}
       </ListGroup>
     );
   }

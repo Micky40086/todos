@@ -14,17 +14,12 @@ class InputFrom extends React.Component {
         const { dispatch } = this.props
         dispatch(addTodo(this.state.input_text))
     }
-    setText = (e) => {
-        this.setState({
-            input_text: e.target.value
-        })
-    }
     render() {
         return (
             <InputGroup>
-                <Input onChange={this.setText}/>
-                <InputGroupAddon onClick={this.addTodo} addonType="append">
-                    <InputGroupText>{this.props.title}</InputGroupText>
+                <Input onChange={this.props.setUserName}/>
+                <InputGroupAddon onClick={this.props.searchRepos} addonType="append">
+                    <InputGroupText>查詢</InputGroupText>
                 </InputGroupAddon>
             </InputGroup>
         )
